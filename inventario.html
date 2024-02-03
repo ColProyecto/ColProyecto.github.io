@@ -6,26 +6,9 @@
   <title>Inventario</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="icon" href="css/images/web.ico" type="image/x-icon">
-  <style>
-    .category-item {
-      display: inline-block;
-      padding: 5px 10px;
-      margin-right: 10px;
-      margin-bottom: 10px;
-      background-color: #f0f0f0; /* Color de fondo */
-      border-radius: 5px;
-    }
-
-    .category-item span {
-      background-color: #ffc107; /* Color de fondo para la palabra de la categoría */
-      padding: 2px 5px;
-      border-radius: 3px;
-      display: inline-block;
-      margin-right: 5px;
-    }
-  </style>
 </head>
 <body>
+
   <header>
     <h1>Inventario</h1>
     <nav class="menu">
@@ -34,15 +17,19 @@
     </nav>
   </header>
 
-  <!-- Categorías -->
-  <div id="category">
-    <h2>Categorías</h2>
-    <form id="add-category-form">
-      <input type="text" id="add-category-input" placeholder="Nombre de categoría" required>
-      <button type="submit">Agregar categoría</button>
-    </form>
-  </div>
-  <div id="category-container"></div>
+  <section class="inventario-container">
+    <!-- Categorías -->
+    <div id="category">
+      <h2>Categorías</h2>
+      <form id="add-category-form">
+        <input type="text" id="add-category-input" placeholder="Nombre de categoría" required>
+        <button type="submit">Agregar categoría</button>
+      </form>
+    </div>
+    <div id="category-container"></div>
+
+  </section>
+  
 
   <!-- Bienvenida-->
   <section> 
