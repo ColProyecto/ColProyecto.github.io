@@ -30,7 +30,7 @@ addCategoryForm.addEventListener('submit', (event) => {
 
     // Agregar botón de eliminar categoría
     const deleteCategoryBtn = document.createElement('button');
-    deleteCategoryBtn.textContent = 'Eliminar';
+    deleteCategoryBtn.textContent = 'x';
     deleteCategoryBtn.classList.add('delete-category-btn');
     deleteCategoryBtn.addEventListener('click', () => {
       deleteCategory(categoryId);

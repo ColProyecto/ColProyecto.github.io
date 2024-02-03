@@ -187,6 +187,13 @@ footer {
   margin: 2cm;
 }
 
+/* Tabla inventario */
+.SCategoria-container {
+  flex-direction: column;
+  align-items: center;
+  margin: 2cm;
+}
+
 .table-container {
   width: 100%;
   overflow-x: auto;
