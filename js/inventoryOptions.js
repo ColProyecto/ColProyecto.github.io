@@ -16,31 +16,36 @@ addRowBtn.addEventListener('click', () => {
   for (let i = 0; i < columnCount; i++) {
     const newCell = document.createElement('td');
     if (i === 0) {
-      newCell.innerHTML = `<button class="delete-row-btn">X</button>`;
+      // Crear el botón dentro de un <td> con la clase "delete-column"
+      const buttonCell = document.createElement('td');
+      buttonCell.className = 'delete-column';
+      const deleteRowBtn = document.createElement('button');
+      deleteRowBtn.textContent = 'X';
+      deleteRowBtn.className = 'delete-row-btn';
+      deleteRowBtn.addEventListener('click', () => {
+        newRow.remove();
+        updateTotals();
+      });
+      buttonCell.appendChild(deleteRowBtn);
+      newRow.appendChild(buttonCell);
     } else if (i === 4) {
-      newCell.innerHTML = `
-        <select class="category-select">
-          <option value="">Sin categoría</option>
-        </select>
-      `;
+      const categoryCell = document.createElement('td');
+      const categorySelect = document.createElement('select');
+      categorySelect.className = 'category-select';
+      const defaultOption = document.createElement('option');
+      defaultOption.value = '';
+      defaultOption.textContent = 'Sin categoría';
+      categorySelect.appendChild(defaultOption);
+      categoryCell.appendChild(categorySelect);
+      newRow.appendChild(categoryCell);
     } else {
       newCell.contentEditable = true;
       newCell.className = 'numeric-field';
+      newRow.appendChild(newCell);
     }
-    newRow.appendChild(newCell);
   }
 
-  // Agregar la clase delete-column a todas las celdas de la columna que contiene el botón de eliminar
-  newRow.classList.add('delete-column');
-
   inventoryTable.querySelector('tbody').appendChild(newRow);
-
-  const deleteRowBtn = newRow.querySelector('.delete-row-btn');
-  deleteRowBtn.addEventListener('click', () => {
-    newRow.remove();
-    updateTotals();
-  });
-
   updateTotals();
   populateCategoryOptions();
 });
