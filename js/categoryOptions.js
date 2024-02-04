@@ -54,3 +54,19 @@ function deleteCategory(categoryId) {
     categories.splice(categoryIndex, 1); // Eliminar la categoría del arreglo categories
   }
 }
+
+// Función para eliminar columna
+function deleteColumn(columnIndex) {
+  const headerRow = inventoryTable.querySelector('thead tr');
+  const rows = inventoryTable.querySelectorAll('tbody tr');
+
+  // Eliminar la columna del encabezado
+  headerRow.deleteCell(columnIndex);
+
+  // Eliminar la columna de cada fila de la tabla
+  rows.forEach((row) => {
+    row.deleteCell(columnIndex);
+  });
+
+  updateTotals();
+}

@@ -1,306 +1,305 @@
-/* Estilos CSS para la página */
+/* Estilos CSS General */
 body {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    margin: 20;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 header {
-  background-color: #070f17;
-  color: #fff;
-  padding: 15px;
-  text-align: center;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-evenly;
+    background-color: #091c2e;
+    color: #fff;
+    padding: 15;
+    margin: -10px;
+    text-align: left;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
 }
 
 .menu {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    padding: 10px;
 }
-
+  
 .menu a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
 }
-
+  
 .menu a:hover {
-  background-color: #f4f4f4;
-  color: #333;
-  border-radius: 5px;
-}
-
-.inventory-table {
-  margin: 10%;
-  padding: 10%;
-  overflow-x: hidden;
-}
-
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-radius: 4px;
-}
-
-th, td {
-  border: 1px solid black;
-  padding: 8px;
+    background-color: #f4f4f4;
+    color: #333;
+    border-radius: 5px;
 }
 
 button {
-  margin-top: 20px;
+    margin-top: 20px;
 }
-.delete-row-btn {
-  background-color: #f44336;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
+
+.space {
+    margin-bottom: 40px;
 }
- 
-.delete-column-btn {
-  background-color: #f44336;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
+
+footer {  
+    width: 100%;
+    color: #fff;
+    margin: -10px;
+    padding: 20px;
+    background-color: #091c2e;
+
+    font-family: 'lato', sans-serif;
+    font-size: 14px;
 }
+
+.space-footer {
+    margin-bottom: 62%;
+}
+
+/*Estilos CSS Index*/
 .container {
-  align-content: center;
-  margin: inherit;
-  margin-top: 80px;
-  max-width: 80%;
-  width: 100%;
-  overflow: hidden;
+    align-content: center;
+    margin: inherit;
+    margin-top: 80px;
+    max-width: 80%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.subtitulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    font-weight: 800;
 }
 
 .left {
-  float: right;
-  width: 100%;
-  max-width: 30%;
-  height: auto;
-  overflow: hidden;
+    float: right;
+    width: 100%;
+    max-width: 30%;
+    height: auto;
+    overflow: hidden;
 }
-
+  
 .left img,
 .right img,
 .left-box2 img,
 .right-box2 img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.subtitulo {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 45px;
-  font-weight: 800;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .right {
-  float: right;
-  width: 100%;
-  padding: 4px;
-  max-width: 40%;
-  height: auto;
-  overflow: hidden;
+    float: right;
+    width: 100%;
+    padding: 4px;
+    max-width: 40%;
+    height: auto;
+    overflow: hidden;
 }
-
+  
 .left-box2 {
-  float: right;
-  width: 100%;
-  max-width: 40%;
-  height: auto;
-  overflow: hidden;
-  padding: 20px;
+    float: right;
+    width: 100%;
+    max-width: 40%;
+    height: auto;
+    overflow: hidden;
+    padding: 20px;
 }
-
+  
 .right-box2 {
-  float: right;
-  width: 100%;
-  max-width: 30%;
-  height: auto;
-  overflow: hidden;
-}
-
-.space {
-  margin-bottom: 60px;
+    float: right;
+    width: 100%;
+    max-width: 30%;
+    height: auto;
+    overflow: hidden;
 }
 
 .banner {
-  background-color: #3096b5;
-  color: #fff;
-  width: 100%;
-  padding: 20px;
-  text-align: center;
+    width: 100%;
+    margin: -10px;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    background-color: #3096b5;
 }
 
 .Facs-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 35px;
-  font-weight: 800;
-  text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    font-weight: 800;
+    text-align: center;
 }
 
 .Facs-sub-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 22px;
-  font-weight: 500;
-  text-align: center;
-}
-
-.image-container {
-  width: 4cm;
-  height: 4cm;
-  object-fit: cover;
-  margin-right: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
 }
 
 span {
-  color: #333; 
-  font-size: 14px; 
-  font-weight: bold; 
+    color: #333; 
+    font-size: 14px; 
+    font-weight: bold; 
+}
+    
+.image-container {
+    width: 4cm;
+    height: 4cm;
+    object-fit: cover;
+    margin-right: 10px;
 }
 
-footer {  
-  background-color: #070f17;
-  color: #fff;
-  width: 100%;
-  padding: 20px;
-  margin-top: 60px;
-  text-align: center;
-  clear: both;
-}
-.mi-web{  
-  font-family: 'Montserrat', sans-serif;
-  font-size: 10px;
-}
-
-/* Tabla inventario */
-.inventario-container {
-  flex-direction: column;
-  align-items: center;
-  margin: 2cm;
-}
-
-/* Tabla inventario */
-.SCategoria-container {
-  flex-direction: column;
-  align-items: center;
-  margin: 2cm;
-}
-
-.table-container {
-  width: 100%;
-  overflow-x: auto;
-  margin-top: 20px;
-}
-
-/* Ajustes para botones en dispositivos móviles */
-@media screen and (max-width: 768px) {
-  button {
-    margin-top: 10px;
-    width: 100%;
-  }
-}
-/* Estilo para la columna que contiene el botón de eliminar */
-.delete-column td:nth-child(1) {
-  border: none;
-  padding:0px ;
-  background-color: #fff;
-}
-
-.space-footer {
-  margin-bottom: 62%;
-}
-
-/* Estilo para el select "category-filter" */
-#category-filter {
-  padding: 8px 20px;
-  border: 1px solid #3096b5;
-  border-radius: 4px;
-  outline: none;
-}
-
-/* Estilo para el input "add-category-input" */
+/* Estilos CSS Category Options */
 #add-category-input {
-  padding: 8px 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin-right: 10px;
-  outline: none;
+    padding: 8px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-right: 10px;
+    outline: none;
 }
 
+#add-category-btn{
+    background-color: #6a30b5;
+    border-radius: 4px;
+    padding: 5px 10px;
+    padding: 8px 20px;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+#category-filter {
+    padding: 8px 20px;
+    border: 1px solid #6a30b5;
+    border-radius: 4px;
+    outline: none;
+}
+
+#category-container {
+    display: inline-block;
+    align-items: center;
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+  
 .category-item {
-  display: inline-block;
-  padding: 5px 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  background-color: #f0f0f0; /* Color de fondo */
-  border-radius: 5px;
+    display: inline-block;
+    background-color: #ffc107; 
+    padding: 2px;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
 }
 
 .category-item span {
-  background-color: #ffc107; /* Color de fondo para la palabra de la categoría */
-  padding: 2px 5px;
-  border-radius: 3px;
-  display: inline-block;
-  margin-right: 5px;
-  font-size: 14px;
-  font-weight: 100;
+    padding: 2px 5px;
+    margin-right: 5px;
 }
 
-
-#add-category-btn{
-  background-color: #4830b5;
-  border-radius: 4px;
-  padding: 5px 10px;
-  padding: 8px 20px;
-  color: white;
-  cursor: pointer;
-  border: none;
-}
-    
-#add-row-btn{
-  background-color: #3096b5;
-  border-radius: 4px;
-  padding: 5px 10px;
-  padding: 8px 20px;
-  color: white;
-  cursor: pointer;
-  border: none;
+.delete-category-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-#add-column-btn{
-  background-color: #3096b5;
-  border-radius: 4px;
-  padding: 5px 10px;
-  padding: 8px 20px;
-  color: white;
-  cursor: pointer;
-  border: none;
+/* Estilos CSS Tabla Inventario - One */
+
+table {
+    width: 90%;
+    align-items: center;
+    border-collapse: collapse;
+    border-radius: 4px;
 }
   
-#calculate-btn{
-  background-color: #3096b5;
-  border-radius: 4px;
-  padding: 5px 10px;
-  padding: 8px 20px;
-  color: white;
-  cursor: pointer;
-  border: none;
+th, td {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 8px;
 }
 
-#export-btn{
-  background-color: #3096b5;
-  border-radius: 4px;
-  padding: 5px 10px;
-  padding: 8px 20px;
-  color: white;
-  cursor: pointer;
-  border: none;
+table, tfoot {
+    border: none;
+    padding: 8px;
 }
+
+.table-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 2cm;
+
+}
+
+#add-row-btn{
+    background-color: #3096b5;
+    border-radius: 4px;
+    padding: 5px 10px;
+    padding: 8px 20px;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+  
+#add-column-btn{
+    background-color: #3096b5;
+    border-radius: 4px;
+    padding: 5px 10px;
+    padding: 8px 20px;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+    
+#calculate-btn{
+    background-color: #3096b5;
+    border-radius: 4px;
+    padding: 5px 10px;
+    padding: 8px 20px;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.inventory-table {
+    margin: 10%;
+    padding: 10%;
+    overflow-x: hidden;
+}
+
+.delete-row-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+   
+.delete-column-btn {
+    position: absolute;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+}
+#total-quantity,
+#total-price{
+    border: none;
+}
+
+/*Export Options*/
+#export-btn{
+    background-color: #30b551;
+    border-radius: 4px;
+    padding: 5px 10px;
+    padding: 8px 20px;
+    color: white;
+    cursor: pointer;
+    border: none;
+  }

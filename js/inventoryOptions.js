@@ -20,7 +20,6 @@ addRowBtn.addEventListener('click', () => {
       newCell.innerHTML = `
         <select class="category-select">
           <option value="">Sin categoría</option>
-          <!-- Opciones de categoría se generarán dinámicamente -->
         </select>
       `;
     } else {
@@ -53,7 +52,7 @@ addColumnBtn.addEventListener('click', () => {
     const newHeaderCell = document.createElement('th');
     newHeaderCell.textContent = columnName;
 
-    // Crear botón de eliminar columna
+// Crear botón de eliminar columna
     const deleteColumnBtn = document.createElement('button');
     deleteColumnBtn.textContent = 'X';
     deleteColumnBtn.classList.add('delete-column-btn');
