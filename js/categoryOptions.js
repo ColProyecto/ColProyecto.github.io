@@ -1,3 +1,4 @@
+// categoryOptions.js
 // Obtener referencia a los elementos HTML
 const addCategoryForm = document.getElementById('add-category-form');
 const addCategoryInput = document.getElementById('add-category-input');
@@ -53,20 +54,4 @@ function deleteCategory(categoryId) {
   if (categoryIndex !== -1) {
     categories.splice(categoryIndex, 1); // Eliminar la categoría del arreglo categories
   }
-}
-
-// Función para eliminar columna
-function deleteColumn(columnIndex) {
-  const headerRow = inventoryTable.querySelector('thead tr');
-  const rows = inventoryTable.querySelectorAll('tbody tr');
-
-  // Eliminar la columna del encabezado
-  headerRow.deleteCell(columnIndex);
-
-  // Eliminar la columna de cada fila de la tabla
-  rows.forEach((row) => {
-    row.deleteCell(columnIndex);
-  });
-
-  updateTotals();
 }

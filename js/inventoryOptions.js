@@ -1,3 +1,4 @@
+// inventoryOptions.js
 // Obtener referencia a los elementos HTML
 const inventoryTable = document.getElementById('inventory-table');
 const addRowBtn = document.getElementById('add-row-btn');
@@ -52,7 +53,7 @@ addColumnBtn.addEventListener('click', () => {
     const newHeaderCell = document.createElement('th');
     newHeaderCell.textContent = columnName;
 
-// Crear botón de eliminar columna
+    // Crear botón de eliminar columna
     const deleteColumnBtn = document.createElement('button');
     deleteColumnBtn.textContent = 'X';
     deleteColumnBtn.classList.add('delete-column-btn');
@@ -125,10 +126,11 @@ function populateCategoryOptions() {
     defaultOption.textContent = 'Sin categoría';
     select.appendChild(defaultOption);
 
+    // Utilizar categories para generar las opciones del select
     categories.forEach((category) => {
       const option = document.createElement('option');
-      option.value = category;
-      option.textContent = category;
+      option.value = category.name; // Ajustar al atributo correcto del objeto de categoría
+      option.textContent = category.name; // Ajustar al atributo correcto del objeto de categoría
       select.appendChild(option);
     });
 
