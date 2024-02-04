@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background-color:#c0d4e5;
 }
 
 header {
@@ -17,8 +18,8 @@ header {
 
 .menu {
     display: flex;
-    flex-direction: column; /* Modificado para una disposición vertical en dispositivos móviles */
-    align-items: center; /* Modificado para centrar verticalmente en dispositivos móviles */
+    flex-direction: row;
+    justify-content: space-between;
     padding: 10px;
 }
 
@@ -62,13 +63,25 @@ footer {
 .space-footer {
     margin-bottom: 62%;
 }
+/* Aplica estilos diferentes para dispositivos móviles usando @media queries */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 40px; /* Ajusta el margen superior para dispositivos móviles */
+    }
+
+    .menu {
+        flex-direction: column; /* Cambia la dirección a vertical */
+        align-items: center; /* Centra los elementos verticalmente */
+    }
+
+    /* Otros estilos específicos para dispositivos móviles */
+}
+
 
 /*Estilos CSS Index*/
 .container {
-    align-content: center;
-    margin: inherit;
-    margin-top: 80px;
-    max-width: 90%; /* Ajusta el ancho máximo del contenedor para dispositivos móviles */
+    margin-top: 20px;
+    max-width: 90%;
     width: 100%;
     overflow: hidden;
 }
