@@ -4,7 +4,6 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color:#c0d4e5;
 }
 
 header {
@@ -61,7 +60,7 @@ footer {
 }
 
 .space-footer {
-    margin-bottom: 62%;
+    margin-bottom: 10%;
 }
 /* Aplica estilos diferentes para dispositivos móviles usando @media queries */
 @media (max-width: 768px) {
@@ -312,10 +311,4 @@ table, tfoot {
     cursor: pointer;
     border: none;
     font-size: 16px;
-    
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 10px;
-    font-size: 16px;
-    padding: 12px 24px;
 }
