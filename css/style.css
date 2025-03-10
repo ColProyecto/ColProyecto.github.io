@@ -1,47 +1,70 @@
-body {
-    font-family: 'Lato', sans-serif;
+/* Estilos Generales */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
-/* Flexbox para mejor alineación */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #36516c;
+    overflow-x: hidden;
+}
+
+/* Header */
 header {
-    background-color: #091c2e;
+    background: linear-gradient(217deg, rgba(0, 179, 105, 1), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0, 86, 176, 1), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgb(11, 58, 108), rgba(0,0,255,0) 70.71%);
     color: #fff;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    justify-content: space-between;
+    padding: 15px 30px;
 }
 
-/* Mejora en navegación */
-.menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.menu {
     display: flex;
-}
-
-.menu li {
-    margin-right: 15px;
+    gap: 15px;
 }
 
 .menu a {
     color: #fff;
     text-decoration: none;
-    padding: 8px 12px;
-    transition: background 0.3s ease;
-}
-
-.menu a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
     border-radius: 5px;
 }
 
-/* Diseño responsivo sin float */
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    background-color: #3096b5;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #267a91;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(48, 150, 181, 0.7); 
+}
+
+
+/* Contenedores Generales */
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -50,30 +73,153 @@ header {
     padding: 20px;
 }
 
-.left, .right {
-    flex: 1;
+/* Secciones */
+.section {
+    padding: 20px 60px 20px 60px;
+    margin-bottom: 20px;
+    background: #ffffff; 
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(217deg, rgb(0, 179, 60), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0, 179, 105, 1), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgb(0, 179, 60), rgba(0,0,255,0) 70.71%);
+    color: #fff;
+    text-align: center;
     padding: 20px;
-    max-width: 500px;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
-.left img {
+/* Tabla de Inventario */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    border-collapse: collapse;
+    margin-top: 15px;
 }
 
-/* Estilos para la sección de características */
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #091c2e;
+    color: white;
+}
+
+tfoot th {
+    background-color: #f4f4f4;
+    color: #091c2e;
+}
+
+/* Botón de eliminar fila */
+.delete-row-btn {
+    background-color: #e74c3c; 
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 3px;
+    color: white;
+}
+
+.delete-row-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Categorías */
+#category {
+    margin-bottom: 20px;
+}
+
+#add-category-input {
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #e1ecf4;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.delete-category-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.delete-category-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(217deg, rgba(0, 179, 105, 1), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0, 86, 176, 1), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgb(11, 58, 108), rgba(0,0,255,0) 70.71%);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+
+/* Estilos de las características */
+.features {
+    text-align: center;
+    padding: 40px 20px;
+}
+
 .feature {
     display: flex;
     align-items: center;
-    margin: 20px 0;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
 }
 
 .feature figure {
-    margin: 0;
-    padding: 0;
+    margin: 20px;
+    padding: 40px;
     flex-shrink: 0;
-    width: 100px;
+    width: 80px;
 }
 
 .feature img {
@@ -83,15 +229,59 @@ header {
 }
 
 .feature p {
-    margin-left: 20px;
+    margin: 10px 20px;
+    border-radius: 20px;
     flex: 1;
 }
 
-/* Mejoras en footer */
-footer {
-    background-color: #091c2e;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
+.feature figcaption {
     font-size: 14px;
+    color: #555;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Sección de FAQ */
+.section {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    background: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.accordion-button {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+    width: 100%;
+    font-size: 16px;
+}
+
+button {
+    background-color: #3096b5;
+    color: #3a4550;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #0056b3;
 }

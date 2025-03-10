@@ -4,78 +4,97 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inventario</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" href="css/images/web.ico" type="image/x-icon">
   <script src="js/exportOptions.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 </head>
 
+
+<header>
+  <h1>Inventario Móvil</h1>
+  <nav class="menu">
+      <a href="index.html">Inicio</a>
+      <a href="inventario/index.html">Inventario</a>
+      <a href="manual_de_usuario.html">Manual de Usuario</a>
+  </nav>
+
+</header>
+
 <body>
-  <!-- Menú -->
-  <header>
-    <h1>Inventario</h1>
-    <nav class="menu">
-      <a href="../" target="_blank">Incio</a>
-      <a href="/inventario/" target="_blank">Inventario</a>
-      <a href="/micomprax/" target="_blank">Mi Compra X</a>
-    </nav>
-  </header>
+  <div class="content">
+    
+    <section class="table-container">
+      <!-- Categorías -->
+      <div id="category">
+        <h2>Categorías</h2>
+        <form id="add-category-form">
+          <input type="text" id="add-category-input" placeholder="Nombre de categoría" required maxlength="20">
+          <button id="add-category-btn" type="submit">Agregar categoría</button>
+        </form>
+      </div>
 
-  <section class="table-container">
-    <!-- Categorías -->
-    <div id="category">
-      <h2>Categorías</h2>
-      <form id="add-category-form">
-        <input type="text" id="add-category-input" placeholder="Nombre de categoría" required maxlength="20">
-        <button id="add-category-btn" type="submit">Agregar categoría</button>
-      </form>
-    </div>
-    <div id="category-container"></div>
+      <div class="category-container" id="category-container"></div>
+      <div class="espacio-horizontal"></div> 
+    </section>
+  
+    <section class="table-container">
+      <button id="add-row-btn">Agregar fila</button>
+      <button id="add-column-btn">Agregar columna</button>
+      <button id="calculate-btn">Calcular</button>
+      <div class="espacio-horizontal"></div> 
+    </section>
+  
+    <!-- Inventario -->
+    <section class="table-container">
+      <div class="espacio-horizontal"></div> 
+      <table id="inventory-table">
+        <thead>
+          <tr>
+            <th class="delete-row" id="delete-row" >x</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Categoría</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th  class="delete-row" >x</th>
+            <th style="border: none;">Total</th>
+            <td id="total-quantity">0</td>
+            <td id="total-price">0</td>
+            <td style="border: none;"></td>
+          </tr>
+        </tfoot>
+      </table>
+      <div class="space-footer"></div>
+    </section>
+
+    <div class="espacio-horizontal"></div> 
+    <section class="inventario-Options">
+      <button id="export-btn">Exportar a Excel</button>
+      <div class="espacio-gigante"></div> 
+
   </section>
+  
+  <div class="espacio-gigante">
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br>
 
-  <section class="table-container">
-    <button id="add-row-btn">Agregar fila</button>
-    <button id="add-column-btn">Agregar columna</button>
-    <button id="calculate-btn">Calcular</button>
-  </section>
-
-  <!-- Inventario -->
-  <section class="table-container">
-    <table id="inventory-table">
-      <thead>
-        <tr>
-          <th id="delete-row">x</th>
-          <th>Producto</th>
-          <th>Cantidad</th>
-          <th>Precio</th>
-          <th>Categoría</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Aquí se generarán las filas dinámicamente -->
-      </tbody>
-      <tfoot>
-        <tr>
-          <th style="border: none;color: rgb(255, 255, 255);">x</th>
-          <th style="border: none;">Total</th>
-          <td id="total-quantity">0</td>
-          <td id="total-price">0</td>
-          <td style="border: none;"></td>
-        </tr>
-      </tfoot>
-    </table>
-    <div class="space-footer"></div>
-  </section>
-  <section class="inventario-Options">
-    <!-- Agrega el botón de exportación aquí -->
-    <button id="export-btn">Exportar a Excel</button>
-</section>
-
+  </div> 
+  </div>
+  
 
   <footer>
+    <div class="espacio-horizontal"></div> 
     <p>&copy; 2024 Mi Página Sencilla | PNF Informática | Sección 30122</p>
     <p>Everlyng Colmenares   C.I.: 29702751</p>
+    <div class="espacio-horizontal"></div> 
   </footer>
 
   <!-- Scripts -->
