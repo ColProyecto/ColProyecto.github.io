@@ -1,3 +1,12 @@
+/* Variables CSS */
+:root {
+    --primary-color: #3096b5;
+    --hover-color: #267a91;
+    --background-color: #f8f9fa;
+    --text-color: #36516c;
+    --header-bg: #2b5882;
+}
+
 /* Estilos Generales */
 * {
     box-sizing: border-box;
@@ -7,16 +16,16 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fa;
-    color: #36516c;
+    background-color: var(--background-color);
+    color: var(--text-color);
     overflow-x: hidden;
 }
 
 /* Header */
 header {
     background: linear-gradient(217deg, rgba(0, 179, 105, 1), rgba(255,0,0,0) 70.71%),
-    linear-gradient(127deg, rgba(0, 86, 176, 1), rgba(0,255,0,0) 70.71%),
-    linear-gradient(336deg, rgb(11, 58, 108), rgba(0,0,255,0) 70.71%);
+                linear-gradient(127deg, rgba(0, 86, 176, 1), rgba(0,255,0,0) 70.71%),
+                linear-gradient(336deg, rgb(11, 58, 108), rgba(0,0,255,0) 70.71%);
     color: #fff;
     display: flex;
     align-items: center;
@@ -33,7 +42,7 @@ header {
     color: #fff;
     text-decoration: none;
     padding: 10px 15px;
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s, color 0.3s;
     border-radius: 5px;
 }
 
@@ -44,31 +53,31 @@ header {
 }
 
 button {
-    background-color: #3096b5;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     padding: 12px 20px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
-    background-color: #267a91;
+    background-color: var(--hover-color);
 }
 
 button:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(48, 150, 181, 0.7); 
 }
+
 .content {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     padding: 40px;
 }
-
 
 /* Contenedores Generales */
 .container {
@@ -81,7 +90,7 @@ button:focus {
 
 /* Secciones */
 .section {
-    padding: 20px 60px 20px 60px;
+    padding: 20px 60px;
     margin-bottom: 20px;
     background: #ffffff; 
     border-radius: 8px;
@@ -91,8 +100,8 @@ button:focus {
 /* Banner */
 .banner {
     background: linear-gradient(217deg, rgb(0, 179, 60), rgba(255,0,0,0) 70.71%),
-    linear-gradient(127deg, rgba(0, 179, 105, 1), rgba(0,255,0,0) 70.71%),
-    linear-gradient(336deg, rgb(0, 179, 60), rgba(0,0,255,0) 70.71%);
+                linear-gradient(127deg, rgba(0, 179, 105, 1), rgba(0,255,0,0) 70.71%),
+                linear-gradient(336deg, rgb(0, 179, 60), rgba(0,0,255,0) 70.71%);
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -118,40 +127,38 @@ th, td {
 }
 
 th {
-    background-color: #091c2e;
+    background-color: var(--header-bg);
     color: white;
 }
 
 tfoot th {
     background-color: #f4f4f4;
-    color: #091c2e;
+    color: var(--header-bg);
 }
 
-
-.delete-row{
-    background-color: #091c2e00;
+.delete-row {
+    background-color: rgba(9, 28, 46, 0);
     color: rgba(255, 255, 255, 0);
     border: none;
     padding: 0;
-
-
 }
-.delete-column{
-    background-color: #091c2e00;
+
+.delete-column {
+    background-color: rgba(9, 28, 46, 0);
     color: rgba(255, 255, 255, 0);
     border: none;
-
 }
+
 .category-select {
-    border: none; /* Elimina los bordes */
-    width: 100%; /* Ajusta el ancho al 100% del contenedor */
-    padding: 10px; /* Añade un poco de padding para hacerlo más grande */
-    border-radius: 5px; /* Opcional: añade bordes redondeados */
-    background-color: #f8f9fa; /* Opcional: establece un color de fondo */
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--background-color);
 }
 
 .category-select::-ms-expand {
-    display: none; /* Elimina la flecha en IE */
+    display: none;
 }
 
 /* Botón de eliminar fila */
@@ -178,10 +185,11 @@ tfoot th {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 .category-container {
-    display: flex; /* Utiliza flexbox para alinear los elementos en una fila */
-    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si no hay espacio */
-    gap: 10px; /* Espacio entre los elementos */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .category-item {
@@ -192,33 +200,21 @@ tfoot th {
     padding: 8px;
     border-radius: 5px;
     margin: 5px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .delete-category-btn {
-    background-color: rgba(231, 76, 60, 0.7); /* Color de fondo más claro y transparente */
+    background-color: rgba(231, 76, 60, 0.7);
     color: white;
-    padding: 3px 8px; /* Reducir el padding para hacerlo más pequeño */
+    padding: 3px 8px;
     border-radius: 10px;
-    font-size: 10px; /* Ajustar el tamaño de fuente */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    font-size: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .delete-category-btn:hover {
-    background-color: rgba(192, 57, 43, 0.9); /* Color de fondo más oscuro al pasar el mouse */
-    transform: scale(1.05); /* Efecto de escalado para resaltar el botón */
-}
-
-
-/* Footer */
-footer {
-    background: linear-gradient(217deg, rgba(0, 179, 105, 1), rgba(255,0,0,0) 70.71%),
-    linear-gradient(127deg, rgba(0, 86, 176, 1), rgba(0,255,0,0) 70.71%),
-    linear-gradient(336deg, rgb(11, 58, 108), rgba(0,0,255,0) 70.71%);
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 14px;
+    background-color: rgba(192, 57, 43, 0.9);
+    transform: scale(1.05);
 }
 
 /* Responsividad */
@@ -244,43 +240,55 @@ footer {
 }
 
 /* Estilos de las características */
-.features {
-    text-align: center;
-    padding: 40px 20px;
+.features{
+    padding: 20px 15% 20px 15%;
+}
+.features h2 {
+    text-align: center; /* Centra el texto */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .feature {
-    display: flex;
-    align-items: center;
-    margin: 20px auto;
-    max-width: 600px;
+    width: 48%;
+    margin-bottom: 20px;
+}
+fe
+
+.feature_right {
+    flex: 1; /* Tomar espacio disponible */
+    text-align: center; /* Centrar contenido */
+}
+
+.feature_right img {
+    max-width: 20%; /* Imagen responsiva */
+    height: auto; /* Mantener proporciones de la imagen */
+}
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
     text-align: left;
+    outline: none;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
-.feature figure {
-    margin: 20px;
-    padding: 40px;
-    flex-shrink: 0;
-    width: 80px;
+.accordion-description {
+    display: none;
+    padding: 10px;
+    background-color: #f1f1f1;
 }
 
-.feature img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.feature p {
-    margin: 10px 20px;
-    border-radius: 20px;
-    flex: 1;
-}
-
-.feature figcaption {
-    font-size: 14px;
-    color: #555;
-    text-align: center;
-    margin-top: 5px;
+.accordion.active, .accordion:hover {
+    background-color: #ccc;
 }
 
 /* Sección de FAQ */
@@ -290,7 +298,9 @@ footer {
     border-radius: 5px;
     margin: 10px 0;
 }
+
 .accordion-button {
+    color: #5e758d;
     background-color: #f1f1f1;
     cursor: pointer;
     padding: 10px;
@@ -301,9 +311,11 @@ footer {
     width: 100%;
     font-size: 16px;
 }
+
 .accordion-button:hover {
     background-color: #ddd;
 }
+
 .accordion-content {
     padding: 0 10px;
     display: none;
@@ -340,6 +352,19 @@ footer {
 }
 
 .espacio-gigante {
-    width: 1000px; /* Espacio horizontal de 100 píxeles */
-    display: inline-block; /* Asegura que el espacio se comporte como un bloque en línea */
+    width: 1000px;
+    display: inline-block; 
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(217deg, rgba(0, 179, 105, 1), rgba(255,0,0,0) 70.71%),
+                linear-gradient(127deg, rgba(0, 86, 176, 1), rgba(0,255,0,0) 70.71%),
+                linear-gradient(336deg, rgb(11, 58, 108), rgba(0,0,255,0) 70.71%);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }

@@ -7,69 +7,73 @@
   <link rel="stylesheet" href="./css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="./css/images/web.ico" type="image/x-icon">
-</head>
+  
+  <style>
+      .accordion {
+          background-color: #eee;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          margin: 10px 0;
+      }
+      .accordion-button {
+          background-color: #f1f1f1;
+          cursor: pointer;
+          padding: 10px;
+          text-align: left;
+          border: none;
+          outline: none;
+          transition: background-color 0.3s;
+          width: 100%;
+          font-size: 16px;
+      }
+      .accordion-button:hover {
+          background-color: #ddd;
+      }
+      .accordion-content {
+          padding: 0 10px;
+          display: none;
+          overflow: hidden;
+          background-color: white;
+      }
+  </style>
+  
+  <script>
+      function toggleAccordion(button) {
+          const content = button.nextElementSibling;
+          content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      }
 
-<body>
-
-    <header>
-      <h1>Inventario Móvil</h1>
-      <nav class="menu">
-          <a href="index.html">Inicio</a>
-          <a href="inventario/index.html">Inventario</a>
-          <a href="manual_de_usuario.html">Manual de Usuario</a>
-      </nav>
-  </header>
-    <style>
-        .accordion {
-            background-color: #eee;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin: 10px 0;
-        }
-        .accordion-button {
-            background-color: #f1f1f1;
-            cursor: pointer;
-            padding: 10px;
-            text-align: left;
-            border: none;
-            outline: none;
-            transition: background-color 0.3s;
-            width: 100%;
-            font-size: 16px;
-        }
-        .accordion-button:hover {
-            background-color: #ddd;
-        }
-        .accordion-content {
-            padding: 0 10px;
-            display: none;
-            overflow: hidden;
-            background-color: white;
-        }
-    </style>
-    <script>
-        function toggleAccordion(button) {
-            const content = button.nextElementSibling;
-            content.style.display = content.style.display === 'block' ? 'none' : 'block';
-        }
-
-        function showSection(id) {
-            document.querySelectorAll('.section').forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(id).style.display = 'block';
-        }
-    </script>
+      function showSection(id) {
+          document.querySelectorAll('.section').forEach(section => {
+              section.style.display = 'none';
+          });
+          document.getElementById(id).style.display = 'block';
+      }
+  </script>
 </head>
 <body>
 
-    <div class="container">
+<header>
+  <h1>Inventario Móvil</h1>
+  <nav class="menu">
+      <a href="index.html">Inicio</a>
+      <a href="inventario/index.html">Inventario</a>
+      <a href="manual_de_usuario.html">Manual de Usuario</a>
+  </nav>
+</header>
+
+<div class="container">
     <br>
     <div class="container">
         <button class="btn" onclick="showSection('faq')">Preguntas Frecuentes</button>
         <button class="btn" onclick="showSection('manual')">Manual de Usuario</button>
+        <div class="espacio-horizontal">
+            <br><br><br><br><br>
+        </div>
     </div>
+    
     <br>
+    <div class="espacio-horizontal"></div>
     
     <div id="faq" class="section" style="display: none;">
         <h2>Preguntas Frecuentes</h2>
@@ -168,6 +172,72 @@
         <p><strong>7. Exportación</strong></p>
         <p>Instrucciones para exportar el inventario a un archivo de Excel. Asegúrate de que todos los datos estén correctos antes de exportar.</p>
     </div>
+
 </div>
+<div class="espacio-horizontal"></div>
+
+<div class="container">
+    <div class="contact-section">
+        <h3>¿Tienes dudas o inconvenientes?</h3>
+        <p>Puedes contactarnos al siguiente correo: <a href="mailto:colmenares.proyecto@gmail.com">colmenares.proyecto@gmail.com</a></p>
+            <form id="contact-form" action="tu_script_de_servidor.php" method="POST">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+    </div>
+</div>
+<div class="espacio-horizontal"></div>
+
+<footer>
+    <p>&copy; 2024 Mi Página Sencilla | PNF Informática | Sección 30122</p>
+    <div class="team-info">
+        <h4>Responsables y Compañeros</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Responsabilidad</th>
+                    <th>Cedulas</th>
+                    <th>Correo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Emanuel Carreño</td>
+                    <td>Planificación y documentación</td>
+                    <td>31.363.570</td>
+                    <td><a href="mailto:emanuelcarre.08@gmail.com">emanuelcarre.08@gmail.com</a></td>
+                </tr>
+                <tr>
+                    <td>Everlyng Colmenares</td>
+                    <td>Desarrollo y documentación</td>
+                    <td>29702751</td>
+                    <td><a href="mailto:gabriela.everlyng@gmail.com">gabriela.everlyng@gmail.com</a></td>
+                </tr>
+                <tr>
+                    <td>Keren Jiménez</td>
+                    <td>Pruebas y documentación</td>
+                    <td>V-19.335.193</td>
+                    <td><a href="mailto:keren.sistema2019@gmail.com">keren.sistema2019@gmail.com</a></td>
+                </tr>
+                <tr>
+                    <td>Reynelix Suniaga</td>
+                    <td>Planificación y documentación</td>
+                    <td>V-30.436.962</td>
+                    <td><a href="mailto:reynelixsuniagas1523@gmail.com">reynelixsuniagas1523@gmail.com</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</footer>
+
 </body>
 </html>

@@ -9,6 +9,7 @@
   <link rel="icon" href="./css/images/web.ico" type="image/x-icon">
 </head>
 
+<body>
 <header>
   <h1>Inventario Móvil</h1>
   <nav class="menu">
@@ -17,9 +18,6 @@
       <a href="manual_de_usuario.html">Manual de Usuario</a>
   </nav>
 </header>
-
-<body>
-
 
   <!-- Sección de Bienvenida -->
   <section class="bienvenida">
@@ -45,31 +43,170 @@
     </p>
   </section>
 
-  <!-- Sección de Características -->
-  <section class="features">
-    <h2>¿Qué te ofrece nuestra aplicación?</h2>
-    
-    <article class="feature">
-      <figure>
-        <img src="css/images/Facilidad.png" alt="Interfaz intuitiva">
-        <figcaption>Facilidad de Uso</figcaption>
-      </figure>
-      <p>Una interfaz amigable y fácil de navegar.</p>
-    </article>
+    <section class="features">
+      <h2>¿Qué te ofrece nuestra aplicación?</h2>
+      <div class="espacio-horizontal"></div>
+      <div class="features-container">
+        
+        <article class="feature">
+          <div class="feature_right">
+            <figure>
+              <img src="css/images/Facilidad.png" alt="Interfaz intuitiva">
+              <figcaption>Facilidad de Uso</figcaption>
+            </figure>
+          </div>
 
-    <article class="feature">
-      <figure>
-        <img src="css/images/acceso.png" alt="Acceso remoto">
-        <figcaption>Acceso desde cualquier lugar</figcaption>
-      </figure>
-      <p>Consulta tu inventario en tiempo real desde cualquier dispositivo.</p>
-    </article>
-  </section>
+          <div class="feature_left">
+            <p>Navega con facilidad gracias a una interfaz intuitiva <br> diseñada para todos los niveles de habilidad.</p>
+            <button class="accordion">Más información</button>
+              <div class="accordion-description">
+                <p>Con nuestra interfaz, puedes realizar tus tareas diarias sin complicaciones, haciendo que la gestión de inventario sea rápida y eficiente.</p>
+            </div>
+          </div>
+        </article>
+    
+        <article class="feature">
+          <div class="feature_right">
+            <figure>
+                <img src="css/images/acceso.png" alt="Acceso remoto">
+                <figcaption>Acceso desde cualquier lugar</figcaption>
+            </figure>
+          </div>
+          
+          <div class="feature_left">
+            <p>Consulta y actualiza tu inventario en tiempo real desde cualquier dispositivo,<br>  ya sea móvil o de escritorio.</p>
+            <button class="accordion">Más información</button>
+            <div class="accordion-description">
+              <p>Accede a tu inventario en cualquier momento y lugar, lo que te permite tomar decisiones informadas y rápidas.</p>
+            </div>
+          </div>
+
+        </article>
+    
+        <article class="feature">
+          
+          <div class="feature_right">
+            <figure>
+              <img src="css/images/exportar.png" alt="Exportar a Excel">
+              <figcaption>Exportar a Excel</figcaption>
+            </figure>
+          </div>
+
+          <div class="feature_left">
+            <p>Exporta fácilmente tus datos a Excel para un análisis más profundo y<br>  reportes personalizados.</p>
+            <button class="accordion">Más información</button>
+            <div class="accordion-description">
+              <p>Genera reportes detallados en formatos de Excel que te ayudarán a visualizar y analizar tu inventario de manera efectiva.</p>
+            </div>
+          </div>
+
+        </article>
+    
+        <article class="feature">
+          
+          <div class="feature_right">
+            <figure>
+              <img src="css/images/categorias.png" alt="Gestión de categorías">
+              <figcaption>Gestión de Categorías</figcaption>
+            </figure>
+          </div>
+
+          <div class="feature_left">
+            <p>Crea y organiza tus productos en categorías para una mejor visualización y gestión.</p>
+            <button class="accordion">Más información</button>
+            <div class="accordion-description">
+              <p>Clasifica tus productos en categorías personalizadas para facilitar la búsqueda y <br> organización dentro de tu inventario.</p>
+            </div>
+            
+          </div>
+        </article>
+    
+        <article class="feature">
+
+          <div class="feature_right">
+            <figure>
+              <img src="css/images/soporte.png" alt="Soporte técnico">
+              <figcaption>Soporte Técnico</figcaption>
+            </figure>
+          </div>
+
+          <div class="feature_left">
+            <p>Recibe asistencia y soporte técnico dedicado para resolver cualquier duda o problema.</p>
+            <button class="accordion">Más información</button>
+            <div class="accordion-description">
+              <p>Contamos con un equipo de soporte listo para ayudarte a resolver cualquier inconveniente que puedas tener con la aplicación.</p>
+            </div>
+          </div>
+
+        </article>
+    
+      </div>
+    </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const accordions = document.querySelectorAll('.accordion');
+
+      accordions.forEach(accordion => {
+        accordion.addEventListener('click', function() {
+          this.classList.toggle('active');
+          const description = this.nextElementSibling; // Cambia 'accordion-content' a 'accordion-description'
+          if (description.style.display === "block") {
+            description.style.display = "none";
+          } else {
+            description.style.display = "block";
+          }
+        });
+      });
+    });
+  </script>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2023 Inventario Móvil | PNF Informática | Sección 30121</p>
-    <p>Everlyng Colmenares - C.I.: 29702751</p>
+    <div class="espacio-horizontal"></div>
+    <p>&copy; 2024 Mi Página Sencilla | PNF Informática | Sección 30122</p>
+    
+    <div class="team-info">
+        <h4>Responsables y Compañeros</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Responsabilidad</th>
+                    <th>Cédulas</th>
+                    <th>Correo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Emanuel Carreño</td>
+                    <td>Planificación y documentación</td>
+                    <td>31.363.570</td>
+                    <td><a href="mailto:emanuelcarre.08@gmail.com">emanuelcarre.08@gmail.com</a></td>
+                </tr>
+                <tr>
+                    <td>Everlyng Colmenares</td>
+                    <td>Desarrollo y documentación</td>
+                    <td>29702751</td>
+                    <td><a href="mailto:gabriela.everlyng@gmail.com">gabriela.everlyng@gmail.com</a></td>
+                </tr>
+                <tr>
+                    <td>Keren Jiménez</td>
+                    <td>Pruebas y documentación</td>
+                    <td>V-19.335.193</td>
+                    <td><a href="mailto:keren.sistema2019@gmail.com">keren.sistema2019@gmail.com</a></td>
+                </tr>
+                <tr>
+                    <td>Reynelix Suniaga</td>
+                    <td>Planificación y documentación</td>
+                    <td>V-30.436.962</td>
+                    <td><a href="mailto:reynelixsuniagas1523@gmail.com">reynelixsuniagas1523@gmail.com</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="espacio-horizontal"></div>
   </footer>
 </body>
 </html>
